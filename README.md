@@ -1,72 +1,98 @@
-# A statically generated blog example using Next.js, Markdown, and TypeScript
+# Unfodl Blog
 
-This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
+A statically generated blog built with Next.js, Markdown, and TypeScript. This blog explores emerging technologies, with a focus on blockchain and transformative technologies.
 
-This example showcases Next.js's [Static Generation](https://nextjs.org/docs/app/building-your-application/routing/layouts-and-templates) feature using Markdown files as the data source.
+## About
 
-The blog posts are stored in `/_posts` as Markdown files with front matter support. Adding a new Markdown file in there will create a new blog post.
+This blog serves as a space to document and share the technologies I explore, starting with blockchain. Here, I break down implementation processes with the goal of deepening my own understanding, while sharing insights with others.
 
-To create the blog posts we use [`remark`](https://github.com/remarkjs/remark) and [`remark-html`](https://github.com/remarkjs/remark-html) to convert the Markdown files into an HTML string, and then send it down as a prop to the page. The metadata of every post is handled by [`gray-matter`](https://github.com/jonschlinkert/gray-matter) and also sent in props to the page.
+## Features
+
+- **Static Generation**: Built with Next.js App Router for optimal performance
+- **Markdown Support**: Blog posts written in Markdown with frontmatter
+- **Syntax Highlighting**: Code snippets with Highlight.js
+- **Dark/Light Mode**: Theme switcher with system preference detection
+- **Responsive Design**: Optimized for all device sizes
+- **TypeScript**: Full type safety throughout the application
 
 ## Demo
 
-[https://next-blog-starter.vercel.app/](https://next-blog-starter.vercel.app/)
+The blog is deployed and available at: [Your Render URL will be here]
 
-## Deploy your own
+## Deployment
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/blog-starter&project-name=blog-starter&repository-name=blog-starter)
+### Render Deployment
 
-### Related examples
+This project includes a `render.yaml` file for easy deployment on Render:
 
-- [AgilityCMS](/examples/cms-agilitycms)
-- [Builder.io](/examples/cms-builder-io)
-- [ButterCMS](/examples/cms-buttercms)
-- [Contentful](/examples/cms-contentful)
-- [Cosmic](/examples/cms-cosmic)
-- [DatoCMS](/examples/cms-datocms)
-- [DotCMS](/examples/cms-dotcms)
-- [Drupal](/examples/cms-drupal)
-- [Enterspeed](/examples/cms-enterspeed)
-- [Ghost](/examples/cms-ghost)
-- [GraphCMS](/examples/cms-graphcms)
-- [Kontent.ai](/examples/cms-kontent-ai)
-- [MakeSwift](/examples/cms-makeswift)
-- [Payload](/examples/cms-payload)
-- [Plasmic](/examples/cms-plasmic)
-- [Prepr](/examples/cms-prepr)
-- [Prismic](/examples/cms-prismic)
-- [Sanity](/examples/cms-sanity)
-- [Sitecore XM Cloud](/examples/cms-sitecore-xmcloud)
-- [Sitefinity](/examples/cms-sitefinity)
-- [Storyblok](/examples/cms-storyblok)
-- [TakeShape](/examples/cms-takeshape)
-- [Tina](/examples/cms-tina)
-- [Umbraco](/examples/cms-umbraco)
-- [Umbraco heartcore](/examples/cms-umbraco-heartcore)
-- [Webiny](/examples/cms-webiny)
-- [WordPress](/examples/cms-wordpress)
-- [Blog Starter](/examples/blog-starter)
+1. **Connect your repository** to Render
+2. **Select "Web Service"** as the service type
+3. **Render will automatically detect** the configuration from `render.yaml`
+4. **Deploy** - Render will run `npm install && npm run build` and start the service
 
-## How to use
+### Manual Deployment
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+If you prefer to deploy manually:
 
 ```bash
-npx create-next-app --example blog-starter blog-starter-app
+# Install dependencies
+npm install
+
+# Build for production
+npm run build
+
+# Start the production server
+npm start
 ```
+
+### Environment Variables
+
+No environment variables are required for basic functionality. The blog uses static generation and doesn't require a database or external services.
+
+## Local Development
 
 ```bash
-yarn create next-app --example blog-starter blog-starter-app
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
 ```
 
-```bash
-pnpm create next-app --example blog-starter blog-starter-app
+Your blog will be available at [http://localhost:3000](http://localhost:3000).
+
+## Adding New Posts
+
+1. Create a new Markdown file in the `_posts` directory
+2. Add frontmatter with title, excerpt, coverImage, date, and author
+3. Write your content in Markdown
+4. The post will automatically appear on your blog
+
+Example post structure:
+
+```markdown
+---
+title: "Your Post Title"
+excerpt: "A brief description of your post"
+coverImage: "/assets/blog/your-post/cover.jpg"
+date: "2024-01-01T00:00:00.000Z"
+author:
+  name: Marco Montes
+  picture: "/assets/blog/authors/jj.jpeg"
+---
+
+Your content here...
 ```
 
-Your blog should be up and running on [http://localhost:3000](http://localhost:3000)! If it doesn't work, post on [GitHub discussions](https://github.com/vercel/next.js/discussions).
+## Technology Stack
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+- **Framework**: Next.js 15 with App Router
+- **Styling**: Tailwind CSS
+- **Content**: Markdown with remark/rehype
+- **Syntax Highlighting**: Highlight.js
+- **Language**: TypeScript
+- **Deployment**: Render (configured)
 
-# Notes
+## License
 
-`blog-starter` uses [Tailwind CSS](https://tailwindcss.com) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3).
+This project is open source and available under the [MIT License](LICENSE).
