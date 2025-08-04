@@ -1,0 +1,25 @@
+/* Highlight.js syntax highlighting */
+@import 'highlight.js/styles/github.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom code block styles */
+pre {
+  @apply rounded-lg shadow-lg p-4 my-6 overflow-x-auto;
+  background-color: #f6f8fa;
+}
+
+code {
+  @apply text-sm;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  pre {
+    @apply bg-gray-900;
+  }
+}
+
+
